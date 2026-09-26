@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة النخبة النموذجية | للتميز عنوان</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            DEFAULT: '#1e3a8a',
+                        },
+                        emerald: {
+                            DEFAULT: '#059669',
+                            dark: '#047857',
+                        },
+                        gold: {
+                            DEFAULT: '#d97706',
+                            hover: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.92) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-navy flex items-center justify-center text-white shadow-lg text-2xl">
+                        <i class="fa-solid font-bold fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-navy block leading-tight">مدرسة النخبة</span>
+                        <span class="text-xs text-gold font-medium tracking-wide">النموذجية الخاصة</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-700">
+                    <a href="#hero" class="hover:text-navy transition-colors text-navy font-bold">الرئيسية</a>
+                    <a href="#about" class="hover:text-navy transition-colors">عن المدرسة</a>
+                    <a href="#stages" class="hover:text-navy transition-colors">المراحل الدراسية</a>
+                    <a href="#news" class="hover:text-navy transition-colors">الأخبار والفعاليات</a>
+                    <a href="#portal" class="hover:text-navy transition-colors">بوابة الخدمات</a>
+                    <a href="#contact" class="hover:text-navy transition-colors">اتصل بنا</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#admission" class="px-5 py-2.5 rounded-xl bg-gold text-white font-medium hover:bg-gold-hover transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-user-plus text-sm"></i>
+                        <span>التقديم والالتحاق</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-navy hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">الرئيسية</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">عن المدرسة</a>
+            <a href="#stages" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">المراحل الدراسية</a>
+            <a href="#news" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">الأخبار والفعاليات</a>
+            <a href="#portal" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">بوابة الخدمات</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-navy border-b border-slate-100">اتصل بنا</a>
+            <a href="#admission" class="mt-4 block text-center px-5 py-2.5 rounded-xl bg-gold text-white font-medium hover:bg-gold-hover">التقديم والالتحاق</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-[88vh] flex items-center relative py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-sm font-medium">
+                        <i class="fa-solid fa-star"></i>
+                        <span>أفضل مدرسة نموذجية لعام 2026</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        نبني الأجيال.. نلهم العقول <br>
+                        <span class="text-amber-400">ونصنع المستقبل</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
+                        مرحباً بكم في مدرسة النخبة النموذجية، حيث نجمع بين الأصالة والتطور العلمي لتوفير بيئة تعليمية محفزة تكتشف مواهب أطفالكم وتصقل مهاراتهم.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#admission" class="px-8 py-4 rounded-xl bg-emerald text-white font-bold hover:bg-emerald-dark transition-all shadow-lg hover:shadow-emerald/30 flex items-center gap-3 text-lg">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>سجل الآن للعام الجديد</span>
+                        </a>
+                        <button onclick="openVirtualTourModal()" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold backdrop-blur-md border border-white/30 transition-all flex items-center gap-3 text-lg">
+                            <i class="fa-solid fa-vr-cardboard text-amber-400"></i>
+                            <span>جولة افتراضية 360°</span>
+                        </button>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 mt-8 max-w-xl mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-3xl font-black text-amber-400">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1">نسبة النجاح العامة</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-amber-400">+1500</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1">طالب وطالبة</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-amber-400">+120</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1">معلم متميز</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Feature Card -->
+                <div class="lg:col-span-5 hidden lg:block">
+                    <div class="glass-card rounded-2xl p-8 shadow-2xl text-slate-800 space-y-6 border border-white/40">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-navy/10 flex items-center justify-center text-navy text-2xl">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-navy">إعلانات سريعة</h3>
+                                <p class="text-xs text-slate-500">آخر التحديثات الهامة للمدرسة</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <i class="fa-solid fa-calendar-check text-emerald mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">بدء التسجيل للعام الدراسي 2026/2027</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">فتح باب القبول لجميع المراحل الدراسية وحتى اكتمال العدد.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <i class="fa-solid fa-trophy text-gold mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">التكريم السنوي للمتفوقين</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">يوم الخميس القادم في مسرح المدرسة الرئيسي.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#portal" class="block w-full text-center py-3 rounded-xl bg-navy text-white font-medium hover:bg-navy-800 transition-colors text-sm">
+                            الذهاب لبوابة الخدمات والأخبار
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald font-bold text-sm uppercase tracking-widest block mb-2">تعرف علينا</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">عن مدرسة النخبة النموذجية</h2>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Vision, Mission, Values -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="w-16 h-16 rounded-2xl bg-navy text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">رؤيتنا</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        أن نكون المؤسسة التعليمية الرائدة في تقديم تعليم عصري فريد يدمج بين القيم الأخلاقية والتكنولوجيا الحديثة لإعداد قادة الغد.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">رسالتنا</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        توفير بيئة آمنة ومحفزة للابتكار والتعلم الذاتي من خلال مناهج عالمية وكوادر تعليمية مؤهلة لتنمية القابليات الفكرية والبدنية للطالب.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100 group">
+                    <div class="w-16 h-16 rounded-2xl bg-gold text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-3">قيمنا الجوهرية</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        التميز، النزاهة، الابتكار، الاحترام المتبادل، والمسؤولية المجتمعية. نغرس هذه القيم يومياً في كل نشاط وفصل دراسي.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Principal's Message -->
+            <div class="bg-gradient-to-br from-navy/5 to-slate-100 rounded-3xl p-8 sm:p-12 border border-slate-200/80">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop" 
+                             alt="مدير المدرسة" 
+                             class="w-48 h-48 rounded-2xl object-cover mx-auto shadow-lg border-4 border-white"
+                             onerror="this.src='https://placehold.co/400x400/1e3a8a/ffffff?text=مدير+المدرسة'">
+                        <h4 class="text-xl font-bold text-navy mt-4">د. عبد الرحمن الأحمد</h4>
+                        <p class="text-sm text-gold font-medium">مدير المدرسة</p>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="text-3xl text-gold opacity-50">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy">كلمة إدارة المدرسة</h3>
+                        <p class="text-slate-600 leading-relaxed italic">
+                            "أهلاً بكم في صرح النخبة العلمي. إننا نؤمن بأن كل طالب يمتلك طاقة إبداعية فريدة، ومهمتنا هي تهيئة الأرضية الخصبة لتفتح هذه الطاقات. نحن لا نلقن العلوم فحسب، بل نبني شخصية قيادية طموحة قادرة على مواجهة تحديات المستقبل بثقة واقتدار."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Stages -->
+    <section id="stages" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald font-bold text-sm uppercase tracking-widest block mb-2">رحلتنا التعليمية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">المراحل الدراسية</h2>
+                <p class="text-slate-600 mt-3">نقدم برامج تعليمية متخصصة ومصممة بعناية لتناسب كل مرحلة عمرية</p>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kindergarten -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-amber-100 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="رياض الأطفال" onerror="this.src='https://placehold.co/600x400/fef3c7/d97706?text=رياض+الأطفال'">
+                            <span class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">KG 1 - KG 2</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-navy mb-2">رياض الأطفال</h3>
+                            <p class="text-slate-600 text-sm mb-4">التعلم بالمرح واللعب، تنمية المهارات الحركية والاجتماعية واللغوية بأساليب حديثة.</p>
+                            <ul class="text-xs space-y-2 text-slate-500 mb-4">
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>أنشطة منتسوري متكاملة</li>
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>تعليم اللغات مبكراً</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#admission" class="block w-full text-center py-2.5 rounded-xl border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition-colors text-sm">التسجيل بالمرحلة</a>
+                    </div>
+                </div>
+
+                <!-- Primary Stage -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-blue-100 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="المرحلة الابتدائية" onerror="this.src='https://placehold.co/600x400/dbeafe/1e3a8a?text=المرحلة+الابتدائية'">
+                            <span class="absolute top-4 right-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full">الصفوف 1 - 6</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-navy mb-2">المرحلة الابتدائية</h3>
+                            <p class="text-slate-600 text-sm mb-4">بناء القاعدة العلمية واللغوية القوية، مع التركيز على التفكير النقدي والمهارات الرقمية.</p>
+                            <ul class="text-xs space-y-2 text-slate-500 mb-4">
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>مناهج العلوم والتكنولوجيا STEM</li>
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>أنشطة لا منهجية ورياضية</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#admission" class="block w-full text-center py-2.5 rounded-xl border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition-colors text-sm">التسجيل بالمرحلة</a>
+                    </div>
+                </div>
+
+                <!-- Middle Stage -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-emerald-100 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="المرحلة الإعدادية" onerror="this.src='https://placehold.co/600x400/d1fae5/059669?text=المرحلة+الإعدادية'">
+                            <span class="absolute top-4 right-4 bg-emerald text-white text-xs font-bold px-3 py-1 rounded-full">الصفوف 7 - 9</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-navy mb-2">المرحلة الإعدادية</h3>
+                            <p class="text-slate-600 text-sm mb-4">تطوير البحث العلمي والمهارات المتقدمة في الرياضيات والعلوم واللغات.</p>
+                            <ul class="text-xs space-y-2 text-slate-500 mb-4">
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>مختبرات تكنولوجية وعلمية مجهزة</li>
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>برامج التوجيه والإرشاد</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#admission" class="block w-full text-center py-2.5 rounded-xl border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition-colors text-sm">التسجيل بالمرحلة</a>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-purple-100 flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="المرحلة الثانوية" onerror="this.src='https://placehold.co/600x400/f3e8ff/6b21a8?text=المرحلة+الثانوية'">
+                            <span class="absolute top-4 right-4 bg-purple-700 text-white text-xs font-bold px-3 py-1 rounded-full">الصفوف 10 - 12</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-navy mb-2">المرحلة الثانوية</h3>
+                            <p class="text-slate-600 text-sm mb-4">تأهيل أكاديمي مكثف لإعداد الطلاب لاختبارات القبول الجامعية بأعلى الدرجات.</p>
+                            <ul class="text-xs space-y-2 text-slate-500 mb-4">
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>مسارات علمية وأدبية متخصصة</li>
+                                <li><i class="fa-solid fa-check text-emerald ml-2"></i>تدريب على الاختبارات القياسية</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#admission" class="block w-full text-center py-2.5 rounded-xl border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition-colors text-sm">التسجيل بالمرحلة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events -->
+    <section id="news" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div>
+                    <span class="text-emerald font-bold text-sm uppercase tracking-widest block mb-2">متابعة دائمية</span>
+                    <h2 class="text-3xl font-extrabold text-navy">الأخبار والفعاليات القادمة</h2>
+                </div>
+                <a href="#" class="mt-4 md:mt-0 text-navy font-bold hover:text-emerald transition-colors flex items-center gap-2">
+                    <span>عرض كل الأخبار</span>
+                    <i class="fa-solid fa-arrow-left text-sm"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <article class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="معرض العلوم" onerror="this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=معرض+العلوم'">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-slate-500 mb-3">
+                            <span><i class="fa-regular fa-calendar ml-1"></i>15 أكتوبر 2026</span>
+                            <span><i class="fa-regular fa-folder ml-1"></i>أنشطة طلابية</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-emerald cursor-pointer transition-colors">
+                            افتتاح المعرض العلمي السنوي للمبتكرين الصغار
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            شاركت أكثر من 50 تجربة علمية واختراعاً إبداعياً أعدها طلاب المدرسة وسط حضور كبير من أولياء الأمور.
+                        </p>
+                        <a href="#" class="text-gold font-bold text-sm hover:underline inline-flex items-center gap-1">قراءة المزيد <i class="fa-solid fa-angle-left text-xs"></i></a>
+                    </div>
+                </article>
+
+                <!-- News Item 2 -->
+                <article class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="رحلة أثرية" onerror="this.src='https://placehold.co/600x400/059669/ffffff?text=رحلة+ميدانية'">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-slate-500 mb-3">
+                            <span><i class="fa-regular fa-calendar ml-1"></i>22 أكتوبر 2026</span>
+                            <span><i class="fa-regular fa-folder ml-1"></i>رحلات ميدانية</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-emerald cursor-pointer transition-colors">
+                            رحلة استكشافية لطلاب المرحلة المتوسطة للمتحف الوطني
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            في إطار ربط المناهج بالواقع، نظمت إدارة الأنشطة رحلة علمية وتاريخية للتعرف على الآثار والتراث الوطني.
+                        </p>
+                        <a href="#" class="text-gold font-bold text-sm hover:underline inline-flex items-center gap-1">قراءة المزيد <i class="fa-solid fa-angle-left text-xs"></i></a>
+                    </div>
+                </article>
+
+                <!-- News Item 3 -->
+                <article class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="بطولة الرياضة" onerror="this.src='https://placehold.co/600x400/d97706/ffffff?text=البطولة+الرياضية'">
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-xs text-slate-500 mb-3">
+                            <span><i class="fa-regular fa-calendar ml-1"></i>02 نوفمبر 2026</span>
+                            <span><i class="fa-regular fa-folder ml-1"></i>رياضة</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-emerald cursor-pointer transition-colors">
+                            فريق المدرسة لكرة القدم يحصد كأس البطولة المدرسية
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            حقق منتخبات المدرسة للمرحلة الثانوية المركز الأول على مستوى المحافظة بعد أداء متميز ومبهر.
+                        </p>
+                        <a href="#" class="text-gold font-bold text-sm hover:underline inline-flex items-center gap-1">قراءة المزيد <i class="fa-solid fa-angle-left text-xs"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal & Interactive Schedule Lookup -->
+    <section id="portal" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold text-sm uppercase tracking-widest block mb-2">خدمات أولياء الأمور والطلاب</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">بوابة التفاعل المباشر والخدمات</h2>
+                <p class="text-slate-400 mt-2">استعلم عن الجداول الدراسية والأجندة بكل سهولة وسرعة</p>
+                <div class="w-20 h-1 bg-amber-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-8 gap-4 flex-wrap">
+                <button onclick="switchTab('schedule')" id="tab-schedule-btn" class="px-6 py-3 rounded-xl bg-emerald font-bold transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i> الاستعلام عن الجدول الدراسي
+                </button>
+                <button onclick="switchTab('calendar')" id="tab-calendar-btn" class="px-6 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-clock"></i> التقويم الدراسي السنوي
+                </button>
+            </div>
+
+            <!-- Tab Content 1: Schedule Lookup -->
+            <div id="tab-schedule" class="bg-slate-800/80 rounded-2xl p-6 sm:p-10 border border-slate-700 backdrop-blur max-w-4xl mx-auto">
+                <form id="schedule-search-form" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-2">المرحلة الدراسية</label>
+                        <select id="stage-select" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald">
+                            <option value="pri">المرحلة الابتدائية</option>
+                            <option value="mid">المرحلة الإعدادية</option>
+                            <option value="sec">المرحلة الثانوية</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-2">الصف الدراسي</label>
+                        <select id="grade-select" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald">
+                            <option value="1">الصف الأول</option>
+                            <option value="2">الصف الثاني</option>
+                            <option value="3">الصف الثالث</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-hover text-white font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-search"></i> عرض الجدول
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Schedule Result Table -->
+                <div id="schedule-result" class="overflow-x-auto">
+                    <table class="w-full text-sm text-right text-slate-300">
+                        <thead class="bg-slate-900 text-amber-400 uppercase text-xs">
+                            <tr>
+                                <th class="p-4 rounded-r-lg">اليوم</th>
+                                <th class="p-4">الحصة الأولى (08:00)</th>
+                                <th class="p-4">الحصة الثانية (09:00)</th>
+                                <th class="p-4">الحصة الثالثة (10:15)</th>
+                                <th class="p-4 rounded-l-lg">الحصة الرابعة (11:15)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700/50">
+                            <tr class="hover:bg-slate-700/30">
+                                <td class="p-4 font-bold text-white">الأحد</td>
+                                <td class="p-4">اللغة العربية</td>
+                                <td class="p-4">الرياضيات</td>
+                                <td class="p-4">العلوم</td>
+                                <td class="p-4">اللغة الإنجليزية</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/30">
+                                <td class="p-4 font-bold text-white">الإثنين</td>
+                                <td class="p-4">التربية الإسلامية</td>
+                                <td class="p-4">الدراسات الاجتماعية</td>
+                                <td class="p-4">الرياضيات</td>
+                                <td class="p-4">الحاسب الآلي</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/30">
+                                <td class="p-4 font-bold text-white">الثلاثاء</td>
+                                <td class="p-4">العلوم</td>
+                                <td class="p-4">اللغة الإنجليزية</td>
+                                <td class="p-4">اللغة العربية</td>
+                                <td class="p-4">تربية رياضية</td>
+                            </tr>
+                            <tr class="hover:bg-slate-700/30">
+                                <td class="p-4 font-bold text-white">الأربعاء</td>
+                                <td class="p-4">الرياضيات</td>
+                                <td class="p-4">اللغة العربية</td>
+                                <td class="p-4">الفيزياء / المهارات</td>
+                                <td class="p-4">أنشطة تفاعلية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: School Calendar (Hidden by default) -->
+            <div id="tab-calendar" class="hidden bg-slate-800/80 rounded-2xl p-6 sm:p-10 border border-slate-700 backdrop-blur max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-lg bg-emerald/20 text-emerald flex items-center justify-center font-bold">01</span>
+                            <div>
+                                <h4 class="font-bold text-white">بداية الفصل الدراسي الأول</h4>
+                                <p class="text-xs text-slate-400">انطلاق الدوام المدرسي لجميع المراحل</p>
+                            </div>
+                        </div>
+                        <span class="text-sm font-semibold text-amber-400">20 سبتمبر 2026</span>
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-lg bg-gold/20 text-gold flex items-center justify-center font-bold">02</span>
+                            <div>
+                                <h4 class="font-bold text-white">اختبارات المنتصف (Midterm)</h4>
+                                <p class="text-xs text-slate-400">لصفوف المراحل الإعدادية والثانوية</p>
+                            </div>
+                        </div>
+                        <span class="text-sm font-semibold text-amber-400">15 نوفمبر 2026</span>
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">03</span>
+                            <div>
+                                <h4 class="font-bold text-white">إجازة منتصف العام الدراسي</h4>
+                                <p class="text-xs text-slate-400">تستمر لمدة أسبوعين لجميع الطلاب</p>
+                            </div>
+                        </div>
+                        <span class="text-sm font-semibold text-amber-400">24 يناير 2027</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission & Contact Section -->
+    <section id="admission" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Online Admission Form -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-200/60">
+                    <div class="mb-8">
+                        <span class="text-emerald font-bold text-sm uppercase tracking-widest block mb-1">انضم لعائلتنا</span>
+                        <h2 class="text-3xl font-extrabold text-navy">استمارة التقديم والالتحاق</h2>
+                        <p class="text-slate-500 text-sm mt-1">يرجى ملء كافة البيانات التالية وسيتم التواصل معكم في أقرب وقت.</p>
+                    </div>
+
+                    <form id="admissionForm" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">اسم الطالب الرباعي *</label>
+                                <input type="text" required placeholder="أدخل اسم الطالب" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">تاريخ الميلاد *</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">المرحلة المراد الالتحاق بها *</label>
+                                <select required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                                    <option value="">اختر المرحلة</option>
+                                    <option value="kg">رياض الأطفال</option>
+                                    <option value="primary">المرحلة الابتدائية</option>
+                                    <option value="middle">المرحلة الإعدادية</option>
+                                    <option value="high">المرحلة الثانوية</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">اسم ولي الأمر *</label>
+                                <input type="text" required placeholder="أدخل اسم ولي الأمر" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">رقم هاتف ولي الأمر *</label>
+                                <input type="tel" required placeholder="05xxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+                                <input type="email" placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">ملاحظات أو استفسارات إضافية</label>
+                            <textarea rows="3" placeholder="اكتب أي ملاحظات قد تهمنا هنا..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-emerald hover:bg-emerald-dark text-white font-bold transition-all shadow-lg hover:shadow-emerald/20 flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>إرسال طلب التقديم</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Map View -->
+                <div id="contact" class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-200/60 space-y-6">
+                        <h3 class="text-2xl font-bold text-navy mb-4">معلومات التواصل</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-navy/10 text-navy flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-800">العنوان</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">شارع التعليم، حي النخبة، العاصمة</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-800">الهاتف والمبيعات</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">+966 12 345 6789 / +966 50 123 4567</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-800">ساعات العمل الرسمية</h4>
+                                    <p class="text-slate-600 text-xs mt-0.5">الأحد - الخميس: 7:00 صباحاً - 2:00 ظهراً</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-navy hover:text-white flex items-center justify-center transition-colors text-slate-600"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-navy hover:text-white flex items-center justify-center transition-colors text-slate-600"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-navy hover:text-white flex items-center justify-center transition-colors text-slate-600"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-navy hover:text-white flex items-center justify-center transition-colors text-slate-600"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Simulated Google Map Card -->
+                    <div class="bg-slate-200 rounded-3xl h-64 relative overflow-hidden shadow-inner border border-slate-300 flex items-center justify-center text-center p-6">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=600&auto=format&fit=crop');"></div>
+                        <div class="relative z-10 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white">
+                            <i class="fa-solid fa-map-location-dot text-3xl text-navy mb-2"></i>
+                            <h4 class="font-bold text-sm text-navy">موقع مدرسة النخبة</h4>
+                            <p class="text-xs text-slate-500 mb-2">اضغط لفتح الخريطة التفاعلية</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block px-4 py-1.5 rounded-lg bg-navy text-white text-xs font-semibold hover:bg-navy-800 transition-colors">فتح في Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <div class="w-10 h-10 rounded-xl bg-navy flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-xl font-bold">مدرسة النخبة</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        نعمل على تقديم أفضل المناهج والبرامج التعليمية لإعداد جيل متميز وواعد.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">عن المدرسة</a></li>
+                        <li><a href="#stages" class="hover:text-amber-400 transition-colors">المراحل الدراسية</a></li>
+                        <li><a href="#news" class="hover:text-amber-400 transition-colors">الأخبار والفعاليات</a></li>
+                        <li><a href="#admission" class="hover:text-amber-400 transition-colors">التقديم والقبول</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">الأنظمة والخدمات</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#portal" class="hover:text-amber-400 transition-colors">جدول الحصص</a></li>
+                        <li><a href="#portal" class="hover:text-amber-400 transition-colors">التقويم الدراسي</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition-colors">بوابة المعلمين</a></li>
+                        <li><a href="#" class="hover:text-amber-400 transition-colors">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">النشرة البريدية</h4>
+                    <p class="text-xs text-slate-400 mb-3">اشترك لتصلك آخر أخبار وفعاليات المدرسة.</p>
+                    <form onsubmit="event.preventDefault(); showToast('تم الاشتراك بنجاح!');" class="flex gap-2">
+                        <input type="email" required placeholder="بريدك الإلكتروني" class="bg-slate-800 text-xs text-white px-3 py-2 rounded-lg border border-slate-700 focus:outline-none w-full">
+                        <button type="submit" class="bg-emerald text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-emerald-dark transition-colors">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+                &copy; 2026 مدرسة النخبة النموذجية. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Virtual Tour Modal -->
+    <div id="virtualTourModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 relative shadow-2xl">
+            <button onclick="closeVirtualTourModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-700 text-xl font-bold p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xl font-bold text-navy mb-4"><i class="fa-solid fa-vr-cardboard text-amber-500 ml-2"></i> الجولة الافتراضية داخل المدرسة</h3>
+            <div class="aspect-video bg-slate-100 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-200 relative">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="جولة افتراضية" onerror="this.src='https://placehold.co/800x450/1e3a8a/ffffff?text=معاينة+المدرسة+360'">
+                <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
+                    <span class="px-6 py-3 rounded-full bg-white/90 font-bold text-navy shadow-xl flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-play text-emerald"></i> ابدأ الجولة الاستكشافية 360 درجة
+                    </span>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 mt-4 text-center">يمكنك التنقل داخل الفصول والمختبرات والملاعب باستخدام الفأرة أو اللمس.</p>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 left-5 z-50 bg-emerald text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-message" class="text-sm font-bold">تم الإرسال بنجاح!</span>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Controls
+        function openVirtualTourModal() {
+            document.getElementById('virtualTourModal').classList.remove('hidden');
+        }
+
+        function closeVirtualTourModal() {
+            document.getElementById('virtualTourModal').classList.add('hidden');
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabName) {
+            const scheduleTab = document.getElementById('tab-schedule');
+            const calendarTab = document.getElementById('tab-calendar');
+            const scheduleBtn = document.getElementById('tab-schedule-btn');
+            const calendarBtn = document.getElementById('tab-calendar-btn');
+
+            if (tabName === 'schedule') {
+                scheduleTab.classList.remove('hidden');
+                calendarTab.classList.add('hidden');
+                scheduleBtn.className = 'px-6 py-3 rounded-xl bg-emerald text-white font-bold transition-all flex items-center gap-2';
+                calendarBtn.className = 'px-6 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold transition-all flex items-center gap-2';
+            } else {
+                scheduleTab.classList.add('hidden');
+                calendarTab.classList.remove('hidden');
+                calendarBtn.className = 'px-6 py-3 rounded-xl bg-emerald text-white font-bold transition-all flex items-center gap-2';
+                scheduleBtn.className = 'px-6 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold transition-all flex items-center gap-2';
+            }
+        }
+
+        // Schedule Search Dynamic Feedback
+        document.getElementById('schedule-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('تم تحديث الجدول وفقاً للاختيار!');
+        });
+
+        // Admission Form Handler
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('تم استلام طلب الالتحاق بنجاح! سينواصل معكم فريق القبول قريباً.');
+            this.reset();
+        });
+
+        // Toast Notification Helper
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
